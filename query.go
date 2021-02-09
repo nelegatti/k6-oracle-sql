@@ -6,7 +6,16 @@ import (
 	"time"
 
 	_ "github.com/godror/godror"
+
+	"github.com/loadimpact/k6/js/modules"
 )
+
+func init() {
+	modules.Register("k6/x/query", new(SQL))
+}
+
+// SQL is the k6 SQL plugin.
+type SQL struct{}
 
 func Query() {
 	currentTime := time.Now()
