@@ -1,0 +1,9 @@
+package main
+
+import (
+	query "Oracle-Con/src/plugins/query"
+)
+
+func main() {
+	query.Query()
+}
