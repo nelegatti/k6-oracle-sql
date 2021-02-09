@@ -11,13 +11,13 @@ import (
 )
 
 func init() {
-	modules.Register("k6/x/query", new(SQL))
+	modules.Register("k6/x/query", new(OracleConnector))
 }
 
-// SQL is the k6 SQL plugin.
-type SQL struct{}
+// OracleConnector is the k6 SQL plugin.
+type OracleConnector struct{}
 
-func Query() {
+func (*OracleConnector) Query() {
 	currentTime := time.Now()
 	fmt.Println("Starting at : ", currentTime.Format("03:04:05:06 PM"))
 
