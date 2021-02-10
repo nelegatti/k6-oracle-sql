@@ -24,7 +24,7 @@ func (*QUERY) Query() {
 	fmt.Println("... Setting up Database Connection")
 
 	db, err := sql.Open("godror", `user="dummy" password="dummy" connectString="localhost:1521/ORCLCDB.localdomain"
-    libDir="/mnt/c/instantclient_19_9"`)
+    libDir="/mnt/f/Linux/instantclient_19_6"`)
 	if err != nil {
 		fmt.Println("... DB Setup Failed")
 		fmt.Println(err)
